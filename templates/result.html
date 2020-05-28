@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			
+		</div>
+		<h1><center>Abusive or Non Abusive Classification</center></h1>
+		
+	</div>
+	</header>
+	<p style="color:blue;font-size:20;text-align: center;"><b>Results for Message</b></p>
+	<center>
+	<div class="results">
+
+
+		
+	{% if prediction == 'Abusive'%}
+	<h2 style="color:red;">Abusive</h2>
+	{% elif prediction == 'Non Abusive'%}
+	<h2 style="color:green;">Non-Abusive</h2>
+	{% endif %}
+	</center>
+	</div>
+
+</body>
+</html>
